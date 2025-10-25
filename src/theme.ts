@@ -1,7 +1,5 @@
+// FIX: To fix the module augmentation error, the previous, non-functional side-effect import of 'styled-components' has been removed. The existing named import of `createGlobalStyle` is sufficient for TypeScript to locate the module and apply the theme type extension.
 import { createGlobalStyle } from 'styled-components';
-// FIX: This side-effect import is placed first to ensure TypeScript processes the module's types
-// before attempting the module augmentation below, which resolves potential resolution errors.
-import 'styled-components';
 
 export const theme = {
     colors: {
