@@ -17,6 +17,22 @@ const BackArrowIcon = () => (
     </svg>
 );
 
+// FIX: Self-closed SVG elements (<rect>, <path>) to be valid JSX.
+const CopyIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+    </svg>
+);
+
+// FIX: Self-closed SVG <polyline> element to be valid JSX.
+const CheckIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="20 6 9 17 4 12" />
+    </svg>
+);
+
+
 // FIX: Self-closed SVG elements (<path>, <line>) to be valid JSX.
 const AnalysisIcon = ({ type }: { type: AnalysisData['type'] }) => {
     const icons: { [key in AnalysisData['type']]: React.ReactElement } = {
@@ -96,6 +112,7 @@ const AnalysisDetailCard: React.FC<{ item: AnalysisData; handleAddWord: (word: s
 const AnalysisPage: React.FC<AnalysisPageProps> = ({ card, navigateTo, handleAddWord, cleanWord }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedScore, setSelectedScore] = useState('5.5');
+    const [copyStatus, setCopyStatus] = useState<'idle' | 'copied'>('idle');
 
     const hasSampleAnswers = card.sampleAnswers && card.sampleAnswers.length > 0;
     const totalAnswers = hasSampleAnswers ? card.sampleAnswers!.length : 0;
@@ -121,6 +138,27 @@ const AnalysisPage: React.FC<AnalysisPageProps> = ({ card, navigateTo, handleAdd
 
     const currentVersion = currentQA?.versions?.find(v => v.score === effectiveScore);
 
+    const handleCopy = () => {
+        if (!currentQA || !currentVersion) return;
+
+        const questionText = currentQA.question.startsWith('Part 2') 
+            ? currentQA.question
+            : `${currentIndex + 1}. ${currentQA.question}`;
+
+        const answerText = Array.isArray(currentVersion.answer)
+            ? currentVersion.answer.join('\n\n')
+            : currentVersion.answer;
+        
+        const textToCopy = `**${questionText}**\n\n${answerText}`;
+
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            setCopyStatus('copied');
+            setTimeout(() => setCopyStatus('idle'), 2000);
+        }).catch(err => {
+            console.error("Could not copy text: ", err);
+        });
+    };
+
 
     return (
         <PageContainer>
@@ -134,7 +172,22 @@ const AnalysisPage: React.FC<AnalysisPageProps> = ({ card, navigateTo, handleAdd
             <main>
                 {currentQA ? (
                     <AnswerContent>
-                        <h4>{currentQA.question.startsWith('Part 2') ? '范文精讲' : `范文精讲 (IELTS ${effectiveScore})`}</h4>
+                        <AnswerContentHeader>
+                            <h4>{currentQA.question.startsWith('Part 2') ? '范文精讲' : `范文精讲 (IELTS ${effectiveScore})`}</h4>
+                            <CopyButton onClick={handleCopy} disabled={copyStatus === 'copied'} aria-label="复制范文">
+                                {copyStatus === 'copied' ? (
+                                    <>
+                                        <CheckIcon />
+                                        <span>已复制</span>
+                                    </>
+                                ) : (
+                                    <>
+                                        <CopyIcon />
+                                        <span>复制</span>
+                                    </>
+                                )}
+                            </CopyButton>
+                        </AnswerContentHeader>
                         
                         {availableScores.length > 1 && (
                             <ScoreSelector>
@@ -279,14 +332,62 @@ const AnswerContent = styled.div`
     border-radius: 16px;
     box-shadow: 0 4px 12px ${({ theme }) => theme.colors.shadow};
 
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        padding: 1rem;
+    }
+`;
+
+const AnswerContentHeader = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+
     h4 {
-        margin: 0 0 1rem 0;
+        margin: 0;
         font-size: 1rem;
         font-weight: 600;
         color: #2e6ab8;
+        flex-grow: 1;
     }
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-        padding: 1rem;
+`;
+
+const CopyButton = styled.button`
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: ${({ theme }) => theme.colors.boxBg};
+    border: 1px solid ${({ theme }) => theme.colors.border};
+    border-radius: 9999px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: ${({ theme }) => theme.colors.label};
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    white-space: nowrap;
+
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    &:hover:not(:disabled) {
+        background-color: ${({ theme }) => theme.colors.border};
+        color: ${({ theme }) => theme.colors.header};
+    }
+
+    &:disabled {
+        cursor: default;
+        color: ${({ theme }) => theme.colors.placeText};
+        border-color: ${({ theme }) => theme.colors.placeBg};
+        background-color: ${({ theme }) => theme.colors.placeBg};
+
+        svg {
+            color: ${({ theme }) => theme.colors.placeText};
+        }
     }
 `;
 

@@ -1,6 +1,13 @@
-// FIX: Add a side-effect import for 'styled-components' to make module augmentation work.
+// FIX: Resolved "module 'styled-components' cannot be found" error by ensuring a
+// robust import. Importing the default `styled` object helps TypeScript's module
+// resolver correctly identify the module for type augmentation. The `styled`
+// object itself is not used in this file but is necessary for the types.
+import styled, { createGlobalStyle } from 'styled-components';
+
+// FIX: Added a side-effect import for 'styled-components'. This is necessary
+// for TypeScript to recognize the module augmentation below, which extends
+// the DefaultTheme with our custom theme type, resolving the "module cannot be found" error.
 import 'styled-components';
-import { createGlobalStyle } from 'styled-components';
 
 export const theme = {
     colors: {
