@@ -25,7 +25,12 @@ const PageRouter: React.FC<PageRouterProps> = ({
 }) => {
     switch (page) {
         case 'bank':
-            return <QuestionBankPage navigateTo={() => navigateTo('home')} navigateToAnalysis={navigateToAnalysis} />;
+            return <QuestionBankPage 
+                        navigateTo={() => navigateTo('home')} 
+                        navigateToAnalysis={navigateToAnalysis}
+                        handleAddWord={handleAddWord}
+                        cleanWord={cleanWord} 
+                    />;
         case 'tips':
             return <TipsPage navigateTo={() => navigateTo('home')} />;
         case 'scoring':
@@ -40,7 +45,12 @@ const PageRouter: React.FC<PageRouterProps> = ({
                         />;
             }
             // Fallback to bank page if card is not set
-            return <QuestionBankPage navigateTo={() => navigateTo('home')} navigateToAnalysis={navigateToAnalysis} />;
+            return <QuestionBankPage 
+                        navigateTo={() => navigateTo('home')} 
+                        navigateToAnalysis={navigateToAnalysis} 
+                        handleAddWord={handleAddWord}
+                        cleanWord={cleanWord}
+                    />;
         case 'home':
         default:
             return <HomePage navigateTo={navigateTo} />;

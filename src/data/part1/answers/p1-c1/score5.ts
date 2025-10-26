@@ -5,9 +5,9 @@ type AnswerContent = Omit<AnswerVersion, 'score'>;
 
 export const score5Answers: { [question: string]: AnswerContent } = {
   'Do you have a friend you have known for a long time?': {
-    answer: `(Yes) Yes, I have a good friend. Her name is Li Mei. We met in middle school. We have known each other for a long time, more than ten years.
+    answer: `Yes, I have a good friend. Her name is Li Mei. We met in middle school. We have known each other for a long time, more than ten years.
     <br/><br/>
-    (No) No, not really. I have moved to different cities a few times. So, it is hard to keep old friends. I have some good friends now, but I have not known them for very long.`,
+    No, not really. I have moved to different cities a few times. So, it is hard to keep old friends. I have some good friends now, but I have not known them for very long.`,
   },
   'What do you usually do with your friends?': {
     answer: "We do many things. We often go to a coffee shop to talk. Sometimes we go shopping or see a movie.",
@@ -25,14 +25,14 @@ export const score5Answers: { [question: string]: AnswerContent } = {
     answer: "I like both. It depends. If I want to talk about something serious, I like to meet just one friend. But for fun, like a party, I like a big group. It is more fun with more people.",
   },
   'Would you invite friends to your home?': {
-    answer: `(Yes) Yes. I like to ask my good friends to come to my home. We can cook, watch TV, and relax. It is more comfortable at home. It is also private. My parents also like my friends.
+    answer: `Yes. I like to ask my good friends to come to my home. We can cook, watch TV, and relax. It is more comfortable at home. It is also private. My parents also like my friends.
     <br/><br/>
-    (No) No, not usually. My home is quite small and far from the city center. It is not very convenient for my friends to come over. We usually prefer to meet somewhere outside, like a cafe.`,
+    No, not usually. My home is quite small and far from the city center. It is not very convenient for my friends to come over. We usually prefer to meet somewhere outside, like a cafe.`,
   },
   'Is there a difference between where you meet friends now and where you used to meet them in the past?': {
-    answer: `(Yes) Yes, it is very different. In the past, when I was a student, we met at school or in a park. We had no money. Now, I have a job, so I have money. We often meet in a restaurant or a coffee shop.
+    answer: `Yes, it is very different. In the past, when I was a student, we met at school or in a park. We had no money. Now, I have a job, so I have money. We often meet in a restaurant or a coffee shop.
     <br/><br/>
-    (No) No, not much difference. When I was young, I met my friends in parks or cafes. Now, we still meet in similar places. We like places where we can sit and talk for a long time.`,
+    No, not much difference. When I was young, I met my friends in parks or cafes. Now, we still meet in similar places. We like places where we can sit and talk for a long time.`,
   },
   'Why are some places suitable for meeting while others are not?': {
     answer: "Some places are good for meeting friends. For example, a coffee shop is good because it is quiet and we can talk. A library is not good because you must be quiet. A crowded place is also not good, like a train station. It is hard to talk there.",

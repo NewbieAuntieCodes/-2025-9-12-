@@ -23,9 +23,9 @@ export const topicDData: TopicData = {
           versions: [
             {
               score: '5',
-              answer: `(Yes) Yes, I remember an ad for a candy. It was very colorful and had a happy song. When I saw it, I wanted to eat the candy.
+              answer: `Yes, I remember an ad for a candy. It was very colorful and had a happy song. When I saw it, I wanted to eat the candy.
               <br/><br/>
-              (No) No, I don't remember any ads from when I was a child. I was more interested in playing outside.`,
+              No, I don't remember any ads from when I was a child. I was more interested in playing outside.`,
             }
           ]
         },
@@ -33,9 +33,9 @@ export const topicDData: TopicData = {
           question: 'Do you see a lot of advertising on trains or other transport?',
           versions: [{
             score: '5',
-            answer: `(Yes) Yes, a lot. On the subway, there are ads everywhere on the walls. There are also TVs that show ads. You can't miss them.
+            answer: `Yes, a lot. On the subway, there are ads everywhere on the walls. There are also TVs that show ads. You can't miss them.
             <br/><br/>
-            (No) No, not in my town. I live in a small town. We don't have a subway. On buses, there are some ads, but not many.`,
+            No, not in my town. I live in a small town. We don't have a subway. On buses, there are some ads, but not many.`,
           }]
         },
         {
@@ -56,9 +56,9 @@ export const topicDData: TopicData = {
           question: 'Do you often see advertisements when you are on your phone or computer?',
           versions: [{
             score: '5',
-            answer: `(Yes) Yes, all the time. When I watch videos online, there are ads. When I use social media, there are ads. It is very common.
+            answer: `Yes, all the time. When I watch videos online, there are ads. When I use social media, there are ads. It is very common.
             <br/><br/>
-            (No) No, not really. I use an ad-blocker on my computer, so I don't see many ads. On my phone, some apps have no ads because I pay for them.`,
+            No, not really. I use an ad-blocker on my computer, so I don't see many ads. On my phone, some apps have no ads because I pay for them.`,
           }]
         },
       ],
@@ -82,54 +82,54 @@ export const topicDData: TopicData = {
             question: 'Are there any rules for students at your school?',
             versions: [{
               score: '5',
-              answer: `(Yes) Yes, of course. We have many rules. For example, we must wear a uniform every day, and we cannot be late for class. We also have rules about homework. I think most schools have rules like these.
+              answer: `Yes, of course. We have many rules. For example, we must wear a uniform every day, and we cannot be late for class. We also have rules about homework. I think most schools have rules like these.
               <br/><br/>
-              (Fewer Rules) Well, my university has fewer rules than my high school. They trust us to be responsible. We don't have to wear a uniform, and the class schedule is more flexible. There are still rules about exams and plagiarism, of course.`
+              Well, my university has fewer rules than my high school. They trust us to be responsible. We don't have to wear a uniform, and the class schedule is more flexible. There are still rules about exams and plagiarism, of course.`
             }]
           },
           {
             question: 'Do you think students would benefit more from more rules?',
             versions: [{
               score: '5',
-              answer: `(Yes) Yes, I think so. Clear rules can help students to be more disciplined. They create a safe and orderly learning environment. When students know what is expected of them, they can focus better on their studies.
+              answer: `Yes, I think so. Clear rules can help students to be more disciplined. They create a safe and orderly learning environment. When students know what is expected of them, they can focus better on their studies.
               <br/><br/>
-              (No) No, I don't think so. Too many rules can make students feel stressed and less creative. I think it's better to give students some freedom and trust them to make good choices. This helps them become more independent.`
+              No, I don't think so. Too many rules can make students feel stressed and less creative. I think it's better to give students some freedom and trust them to make good choices. This helps them become more independent.`
             }]
           },
           {
             question: 'Have you ever had a really dedicated teacher?',
             versions: [{
               score: '5',
-              answer: `(Yes) Yes, my high school history teacher was very dedicated. He loved the subject and always made his classes interesting with stories. He stayed late to help students and really cared about our success. He was a great teacher.
+              answer: `Yes, my high school history teacher was very dedicated. He loved the subject and always made his classes interesting with stories. He stayed late to help students and really cared about our success. He was a great teacher.
               <br/><br/>
-              (No) No, I can't say that I have. Most of my teachers were good at their jobs, but I wouldn't call them exceptionally dedicated. They taught the class and did what was required, but they didn't go above and beyond.`
+              No, I can't say that I have. Most of my teachers were good at their jobs, but I wouldn't call them exceptionally dedicated. They taught the class and did what was required, but they didn't go above and beyond.`
             }]
           },
           {
             question: 'Do you prefer to have more or fewer rules at school?',
             versions: [{
               score: '5',
-              answer: `(More) I prefer to have more rules. I think rules make everything clear and fair for everyone. It prevents confusion and makes the school environment more organized. I feel more comfortable when I know exactly what the rules are.
+              answer: `I prefer to have more rules. I think rules make everything clear and fair for everyone. It prevents confusion and makes the school environment more organized. I feel more comfortable when I know exactly what the rules are.
               <br/><br/>
-              (Fewer) I prefer to have fewer rules. I like having more freedom. When there are too many rules, I feel like I can't be myself. I believe students learn better when they are given more trust and responsibility.`
+              I prefer to have fewer rules. I like having more freedom. When there are too many rules, I feel like I can't be myself. I believe students learn better when they are given more trust and responsibility.`
             }]
           },
           {
             question: 'Have you ever had a really strict teacher?',
             versions: [{
               score: '5',
-              answer: `(Yes) Yes, my math teacher in middle school was very strict. We had to be silent in her class and our homework had to be perfect. At the time, I didn't like it, but now I know she helped me learn a lot.
+              answer: `Yes, my math teacher in middle school was very strict. We had to be silent in her class and our homework had to be perfect. At the time, I didn't like it, but now I know she helped me learn a lot.
               <br/><br/>
-              (No) No, I've been lucky. All of my teachers have been quite relaxed and friendly. They were serious about teaching, but they weren't overly strict. They treated us with respect.`
+              No, I've been lucky. All of my teachers have been quite relaxed and friendly. They were serious about teaching, but they weren't overly strict. They treated us with respect.`
             }]
           },
           {
             question: 'Would you like to work as a teacher in a rule-free school?',
             versions: [{
               score: '5',
-              answer: `(Yes) Yes, that sounds interesting. I think it would be a very creative environment. The students could learn based on their interests. As a teacher, it would be a challenge, but also very rewarding to see students learn in a free way.
+              answer: `Yes, that sounds interesting. I think it would be a very creative environment. The students could learn based on their interests. As a teacher, it would be a challenge, but also very rewarding to see students learn in a free way.
               <br/><br/>
-              (No) No, I don't think so. I believe some rules are necessary for a school to function. Without rules, the classroom could be very chaotic. It would be very difficult for the teacher to teach and for the students to learn.`
+              No, I don't think so. I believe some rules are necessary for a school to function. Without rules, the classroom could be very chaotic. It would be very difficult for the teacher to teach and for the students to learn.`
             }]
           }
       ]
@@ -151,18 +151,18 @@ export const topicDData: TopicData = {
             question: 'Do you like buying shoes? How often?',
             versions: [{
               score: '5',
-              answer: `(Yes) Yes, I love buying shoes. I think a nice pair of shoes can complete an outfit. I probably buy new shoes every two or three months, especially if I see a style I really like or if there is a sale.
+              answer: `Yes, I love buying shoes. I think a nice pair of shoes can complete an outfit. I probably buy new shoes every two or three months, especially if I see a style I really like or if there is a sale.
               <br/><br/>
-              (No) No, not really. I don't care much about fashion. I only buy new shoes when my old ones are worn out. For me, shoes are just for function, not for style. So I don't buy them very often, maybe once a year.`
+              No, not really. I don't care much about fashion. I only buy new shoes when my old ones are worn out. For me, shoes are just for function, not for style. So I don't buy them very often, maybe once a year.`
             }]
           },
           {
             question: 'Have you ever bought shoes online?',
             versions: [{
               score: '5',
-              answer: `(Yes) Yes, many times. It's very convenient, and there are more choices online. I know my size, so it's usually not a problem. Also, the prices are often cheaper online.
+              answer: `Yes, many times. It's very convenient, and there are more choices online. I know my size, so it's usually not a problem. Also, the prices are often cheaper online.
               <br/><br/>
-              (No) No, never. I need to try shoes on before I buy them. Different brands have different sizes, and I want to make sure they are comfortable. I don't trust buying shoes without trying them first.`
+              No, never. I need to try shoes on before I buy them. Different brands have different sizes, and I want to make sure they are comfortable. I don't trust buying shoes without trying them first.`
             }]
           },
           {
@@ -173,9 +173,9 @@ export const topicDData: TopicData = {
             question: 'Which do you prefer, fashionable shoes or comfortable shoes?',
             versions: [{
               score: '5',
-              answer: `(Fashionable) I definitely prefer fashionable shoes. I believe style is very important. Even if they are not super comfortable, I don't mind for a special occasion. Looking good makes me feel confident.
+              answer: `I definitely prefer fashionable shoes. I believe style is very important. Even if they are not super comfortable, I don't mind for a special occasion. Looking good makes me feel confident.
               <br/><br/>
-              (Comfortable) I always choose comfortable shoes. I walk a lot every day, so comfort is my top priority. I don't care if they are the latest fashion. If my feet hurt, I can't do anything.`
+              I always choose comfortable shoes. I walk a lot every day, so comfort is my top priority. I don't care if they are the latest fashion. If my feet hurt, I can't do anything.`
             }]
           }
       ]
@@ -197,9 +197,9 @@ export const topicDData: TopicData = {
             question: 'Do you keep plants at home?',
             versions: [{
               score: '5',
-              answer: `(Yes) Yes, I do. I have a few small plants on my desk and on the windowsill. They make my room look nicer and feel fresher. I enjoy taking care of them.
+              answer: `Yes, I do. I have a few small plants on my desk and on the windowsill. They make my room look nicer and feel fresher. I enjoy taking care of them.
               <br/><br/>
-              (No) No, I don't. I'm not very good at taking care of plants. I always forget to water them, so they usually die. Also, I don't have much space for plants in my small apartment.`
+              No, I don't. I'm not very good at taking care of plants. I always forget to water them, so they usually die. Also, I don't have much space for plants in my small apartment.`
             }]
           },
           {
@@ -210,18 +210,18 @@ export const topicDData: TopicData = {
             question: 'Do you know anything about growing a plant?',
             versions: [{
               score: '5',
-              answer: `(Yes) Yes, I know some basic things. I know that plants need sunlight, water, and good soil. I also know that different plants need different amounts of sun and water. I learned this from my grandmother and from the internet.
+              answer: `Yes, I know some basic things. I know that plants need sunlight, water, and good soil. I also know that different plants need different amounts of sun and water. I learned this from my grandmother and from the internet.
               <br/><br/>
-              (No) No, not much at all. I know they need water and sunlight, but that's about it. I have no idea what kind of soil to use or how often to water them. I'm a complete beginner.`
+              No, not much at all. I know they need water and sunlight, but that's about it. I have no idea what kind of soil to use or how often to water them. I'm a complete beginner.`
             }]
           },
           {
             question: 'Do Chinese people send plants as gifts?',
             versions: [{
               score: '5',
-              answer: `(Yes) Yes, it is quite common. People often send plants, especially flowers like orchids, as gifts for special occasions like a housewarming or the opening of a new business. It's a symbol of good luck and growth.
+              answer: `Yes, it is quite common. People often send plants, especially flowers like orchids, as gifts for special occasions like a housewarming or the opening of a new business. It's a symbol of good luck and growth.
               <br/><br/>
-              (No) It's not very common, I think. People usually prefer to give other gifts, like fruit, tea, or something more practical. Sending a plant is a nice idea, but not everyone has the time or space to take care of it.`
+              It's not very common, I think. People usually prefer to give other gifts, like fruit, tea, or something more practical. Sending a plant is a nice idea, but not everyone has the time or space to take care of it.`
             }]
           }
       ]
